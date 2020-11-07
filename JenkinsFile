@@ -10,7 +10,8 @@ node {
     def mavenHome = tool name: 'LocalMaven'
 	if(isUnix()){
 	  env.PATH = "${mavenHome}/bin;${env.PATH}"
-	  sh "mvn clean install"
+	  echo "PATH=${env.PATH}"
+	  sh "${mavenHome}/bin/mvn clean install"
 	}
     }
 
