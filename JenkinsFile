@@ -9,11 +9,8 @@ node {
     echo "Building in progress...."
     def mavenHome = tool name: 'LocalMaven'
 	if(isUnix()){
-	  echo "maven in progress...."
 	  env.PATH = "${mavenHome}/bin;${env.PATH}"
-	  echo "PATH=${env.PATH}"
-	  sh "whereis mvn"
-	  sh "${mavenHome}/bin/mvn clean install"
+	  sh "mvn clean install"
 	}
     }
 
