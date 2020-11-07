@@ -22,7 +22,7 @@ Application running steps
 1) Extract tomcat 9 (apache-tomcat-9.0.33.zip)
 2) Copy the HW.war file into the apache-tomcat-9.0.33\webapps folder under extracted tomcat
 3) Run the start.bat(windows) or start.sh(mac/linux) under the apache-tomcat-9.0.33\bin folder
-4) Access application in a browser at http://localhost:8080/HW3/
+4) Access application in a browser at http://localhost:8080/SWE645_RestBackend/
 5) Refer the Navigation section in readme for more details
 
 Application development steps

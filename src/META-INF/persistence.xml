@@ -6,19 +6,21 @@
 	version="2.1">
 
 	<persistence-unit name="StudentDB">
-		<class>StudentDAO</class>
+		<class>com.swe.assignment.dao.StudentDAO</class>
+		
 		<properties>
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:oracle:thin:@artemis.vsnet.gmu.edu:1521/vse18c.vsnet.gmu.edu" />
+				value="jdbc:mysql://swe645db.cblnigtx0ewz.us-east-1.rds.amazonaws.com:3306/swe645db" />
 			<property name="javax.persistence.jdbc.user"
-				value="" />
+				value="swe645group" />
 			<property name="javax.persistence.jdbc.password"
-				value="" />
+				value="swe645groupproject" />
 			<property name="javax.persistence.jdbc.driver"
-				value="oracle.jdbc.OracleDriver" />
+				value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.dialect"
-				value="org.hibernate.dialect.Oracle8iDialect" />
-			<property name="hibernate.show_sql" value="true" />
+				value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" /> 
+			<!-- <property name="hibernate.hbm2ddl.auto" value="create"/> -->
 		</properties>
 	</persistence-unit>
 </persistence>
