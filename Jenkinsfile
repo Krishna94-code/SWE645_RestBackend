@@ -31,7 +31,7 @@ node {
     stage('Deploy') {
          withKubeConfig([credentialsId: 'rancher-login', serverUrl: 'https://ec2-18-205-60-62.compute-1.amazonaws.com/k8s/clusters/c-xcfr8']) {
          sh "sed -i 's/{buildNumber}/$BUILD_NUMBER/g' swe645-restbackend.yaml"
-         sh 'kubectl apply -f swe645-restbackend.yaml'
+         sh '/usr/local/bin/kubectl apply -f swe645-restbackend.yaml'
         }
         }
 }
