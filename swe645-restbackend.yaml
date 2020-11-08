@@ -47,7 +47,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name:  swe645-srv
+  name:  swe645-restbackend-srv
   labels:
     run: swe645-restbackend
 spec:
