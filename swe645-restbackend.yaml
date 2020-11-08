@@ -57,6 +57,6 @@ spec:
       port: 443
       protocol: TCP
       targetPort: 8080
-      nodePort: 31750
+      nodePort: 8080
   selector:
     app: swe645-restbackend
