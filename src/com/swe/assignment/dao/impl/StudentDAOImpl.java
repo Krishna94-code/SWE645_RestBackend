@@ -100,6 +100,19 @@ public class StudentDAOImpl {
 		List<Object> studIDList = qry.getResultList();
 		return studIDList;
 	}
+	
+	public List<StudentBean> readStudentDB() throws Exception {
+		List<StudentBean>s = new ArrayList<StudentBean>() ;
+		// create a query to select all the student ids
+		Query qry = entityManager.createQuery("select * from StudentDAO");
+		@SuppressWarnings("unchecked")
+		List<Object> studList = qry.getResultList();
+		for (Object std: studList){
+			s.add(((StudentDAO) std).convert());
+		}
+		return s;
+	}
+
 
 	/**
 	 * Method to query the database based on the id passed to it and return the
