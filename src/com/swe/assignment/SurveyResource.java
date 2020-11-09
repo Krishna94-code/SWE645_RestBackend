@@ -26,14 +26,14 @@ public class SurveyResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllStudentsSurveyForm() {
 		try {
-			List<Object> obj = StudentDAOImpl.getInstance().readStudentIds();
+			List<StudentBean> obj = StudentDAOImpl.getInstance().readStudentDB();
 			return Response.status(200).entity(obj).build();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		return Response.status(500).build();
 	}
-
+	
 	@DELETE
 	@Path("{studentId}")
 	@Produces(MediaType.APPLICATION_JSON)
