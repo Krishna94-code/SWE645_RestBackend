@@ -26,7 +26,7 @@ public class SurveyResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllStudentsSurveyForm() {
 		try {
-			List<StudentBean> obj = StudentDAOImpl.getInstance().readStudentDB();
+			List<StudentBean> obj = StudentDAOImpl.getInstance().readStudentIds();
 			return Response.status(200).entity(obj).build();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
