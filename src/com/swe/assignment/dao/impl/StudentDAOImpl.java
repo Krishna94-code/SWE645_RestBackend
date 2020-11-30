@@ -29,7 +29,7 @@ public class StudentDAOImpl {
 	private EntityManager entityManager;
 	// variable to hold the entityManager factory object
 	private EntityManagerFactory factory;
-	private String bootstrapServers = "localhost:9092";
+	private String bootstrapServers = "app-kafka-bootstrap:9092";
 	
 	private Cache<String, StudentBean[]> cache;
 	//StudentBean[] d =new StudentBean[1];
