@@ -168,5 +168,21 @@ public class StudentBean {
 	public void setLikedMost(String[] likedMost) {
 		this.likedMost = likedMost;
 	}
+	 public StudentBean(String id, String userName, String address, String city, String state, int zip,
+			String telephone, String email, String dateOfSurvey,
+			String comments) {
+		super();
+		this.id = id;
+		this.userName = userName;
+		this.streetAddress = address;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.telephone = telephone;
+		this.email = email;
+		this.dateOfSurvey = dateOfSurvey;
+		
+		this.comments = comments;
+	}
 
 }
