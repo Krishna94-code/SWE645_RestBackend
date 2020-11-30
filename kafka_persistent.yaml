@@ -18,7 +18,7 @@ allowedTopologies:
 apiVersion: kafka.strimzi.io/v1beta1
 kind: Kafka
 metadata:
-  name: app
+  name: kafka-app
 spec:
   kafka:
     version: 2.6.0

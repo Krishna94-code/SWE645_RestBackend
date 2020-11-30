@@ -33,7 +33,7 @@ node {
          sh "sed -i 's/{buildNumber}/$BUILD_NUMBER/g' swe645-restbackend.yaml"
          sh '/usr/local/bin/kubectl apply -f swe645-restbackend.yaml'
 	 sh '/usr/local/bin/kubectl apply -f kafka-topic.yaml'
-	 sh '/usr/local/bin/kubectl apply -f aws_ebs.yaml'	 
+	 sh '/usr/local/bin/kubectl apply -f kafka_persistent.yaml'	 
         }
         }
 }
