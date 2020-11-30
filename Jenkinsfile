@@ -32,6 +32,8 @@ node {
          withKubeConfig([credentialsId: 'rancher-login', serverUrl: 'https://ec2-3-239-59-84.compute-1.amazonaws.com/k8s/clusters/c-lqwvp']) {
          sh "sed -i 's/{buildNumber}/$BUILD_NUMBER/g' swe645-restbackend.yaml"
          sh '/usr/local/bin/kubectl apply -f swe645-restbackend.yaml'
+	 sh '/usr/local/bin/kubectl apply -f kafka-topic.yaml'
+	 sh '/usr/local/bin/kubectl apply -f aws_ebs.yaml'	 
         }
         }
 }
