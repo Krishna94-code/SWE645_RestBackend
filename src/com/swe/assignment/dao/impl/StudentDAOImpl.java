@@ -32,7 +32,7 @@ public class StudentDAOImpl {
 	private String bootstrapServers = "kafka-app-kafka-bootstrap:9092";
 	
 	private Cache<String, StudentBean[]> cache;
-	StudentBean[] d =new StudentBean[1];
+	//StudentBean[] d =new StudentBean[1];
 
 	// setting the entityManager and connection during the object creation
 	public StudentDAOImpl() {
@@ -46,10 +46,10 @@ public class StudentDAOImpl {
 
 		cache = new KafkaCache<>(new KafkaCacheConfig(props), Serdes.String(), Serdes.serdeFrom(new UserSerializer(), new UserDeserializer()));
 		cache.init();
-		d[0]=new StudentBean("123","cde","cf","hj", "jk", 2,
-				"45", "jkkk", "fgt",
-				"hjkk");
-		cache.put("qe",d);
+		//d[0]=new StudentBean("123","cde","cf","hj", "jk", 2,
+				//"45", "jkkk", "fgt",
+				//"hjkk");
+		//cache.put("qe",d);
 	}
 
 	
